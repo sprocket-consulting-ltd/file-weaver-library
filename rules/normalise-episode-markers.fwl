@@ -1,0 +1,16 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "Normalise Episode Markers",
+  "description": "Regex rule that rewrites TV episode markers like S01E02, s01e02, or S01e02 into a consistent '- s01e02 -' form.",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T17:27:52Z",
+  "ruleType": "Regex Replace",
+  "rule": {
+    "type": "Regex Replace",
+    "regexPattern": "[Ss](\\d{2})[Ee](\\d{2})",
+    "regexReplacement": "- s$1e$2 -"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "Capture Artist and Title",
+  "description": "Set Variable rule for \"Artist - Title\" filenames: captures ARTIST and TITLE for use in later rules. Pairs with \"Organise Into Artist Folders\".",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T09:00:00Z",
+  "ruleType": "Set Variable",
+  "rule": {
+    "type": "Set Variable",
+    "setVarPattern": "(?P<ARTIST>[^-]+) - (?P<TITLE>.+)"
+  }
+}

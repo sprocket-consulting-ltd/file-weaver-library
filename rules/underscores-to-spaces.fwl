@@ -1,0 +1,18 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "Underscores to Spaces",
+  "description": "Find & Replace rule that turns every underscore into a space.",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T09:00:00Z",
+  "ruleType": "Find & Replace",
+  "rule": {
+    "type": "Find & Replace",
+    "findText": "_",
+    "replaceText": " ",
+    "caseSensitive": false,
+    "replaceAll": true
+  }
+}

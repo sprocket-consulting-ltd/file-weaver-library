@@ -1,0 +1,16 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "Remove Bracketed Text",
+  "description": "Regex rule that deletes anything in round brackets, including the brackets and any space before them: \"report (final) (2).docx\" becomes \"report.docx\".",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T09:00:00Z",
+  "ruleType": "Regex Replace",
+  "rule": {
+    "type": "Regex Replace",
+    "regexPattern": "\\s*\\([^)]*\\)",
+    "regexReplacement": ""
+  }
+}

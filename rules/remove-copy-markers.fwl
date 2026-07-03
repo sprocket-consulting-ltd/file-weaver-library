@@ -1,0 +1,15 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "Remove Copy Markers",
+  "description": "Strips the clutter that duplicated files accumulate: \"Copy of \", \" copy\", \" (1)\", \" (2)\".",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T09:00:00Z",
+  "ruleType": "Strip Text",
+  "rule": {
+    "type": "Strip Text",
+    "stripItems": ["Copy of ", " copy", " (1)", " (2)"]
+  }
+}

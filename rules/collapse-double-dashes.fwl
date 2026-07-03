@@ -1,0 +1,18 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "Collapse '- -' to '-'",
+  "description": "Find & Replace rule that tidies the double separator left behind when text between two dashes is removed.",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T17:27:52Z",
+  "ruleType": "Find & Replace",
+  "rule": {
+    "type": "Find & Replace",
+    "findText": "- -",
+    "replaceText": "-",
+    "caseSensitive": false,
+    "replaceAll": true
+  }
+}

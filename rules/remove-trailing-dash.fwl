@@ -1,0 +1,15 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "Remove ' -' from the end (if present)",
+  "description": "Script rule that trims a dangling ' -' left at the end of a name after other rules have removed text.",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T17:27:52Z",
+  "ruleType": "Script",
+  "rule": {
+    "type": "Script",
+    "scriptText": "IF RIGHT($NAME, 2) = \" -\" THEN\n  $NAME = LEFT($NAME, LEN($NAME) - 2)\nEND IF"
+  }
+}

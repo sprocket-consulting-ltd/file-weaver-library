@@ -1,0 +1,15 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "Lowercase Names",
+  "description": "Converts the whole filename to lowercase.",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T09:00:00Z",
+  "ruleType": "Change Case",
+  "rule": {
+    "type": "Change Case",
+    "caseOption": "lowercase"
+  }
+}

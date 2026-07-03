@@ -1,0 +1,15 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "Organise Into Artist Folders",
+  "description": "Set Name rule that rebuilds the name as ARTIST/TITLE, moving each file into a per-artist subfolder. Requires \"Capture Artist and Title\" (or your own Set Variable rule) above it.",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T09:00:00Z",
+  "ruleType": "Set Name",
+  "rule": {
+    "type": "Set Name",
+    "setNameTemplate": "%VAR:ARTIST%//%VAR:TITLE%"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "Tidy Spaces",
+  "description": "Removes leading and trailing spaces and collapses runs of spaces into one. Zero configuration - handy as the last rule in any stack.",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T09:00:00Z",
+  "ruleType": "Trim Spaces",
+  "rule": {
+    "type": "Trim Spaces"
+  }
+}

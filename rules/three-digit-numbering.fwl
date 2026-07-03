@@ -1,0 +1,19 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "Three-Digit Numbering",
+  "description": "Appends a zero-padded running number after the name: photo_001, photo_002, ...",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T09:00:00Z",
+  "ruleType": "Sequential Number",
+  "rule": {
+    "type": "Sequential Number",
+    "numberPosition": "After name",
+    "numberStart": 1,
+    "numberStep": 1,
+    "numberDigits": 3,
+    "numberSeparator": "_"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "fwlVersion": 1,
+  "kind": "preset",
+  "name": "TV Episode Tidy",
+  "description": "Normalises TV episode filenames: consistent s01e02 markers, drops the episode title, and cleans up leftover dashes. Add your own Find & Replace rules on top for show-specific fixes.",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T17:27:52Z",
+  "rules": [
+    {
+      "type": "Regex Replace",
+      "regexPattern": "[Ss](\\d{2})[Ee](\\d{2})",
+      "regexReplacement": "- s$1e$2 -"
+    },
+    {
+      "type": "Script",
+      "scriptText": "IF RIGHT($NAME, 2) = \" -\" THEN\n  $NAME = LEFT($NAME, LEN($NAME) - 2)\nEND IF"
+    },
+    {
+      "type": "Find & Replace",
+      "findText": "- -",
+      "replaceText": "-",
+      "caseSensitive": false,
+      "replaceAll": true
+    },
+    {
+      "type": "Regex Replace",
+      "regexPattern": "^(.*?)\\s-\\s(.*?)\\s-\\s(.*)$",
+      "regexReplacement": "$1 - $2"
+    },
+    {
+      "type": "Trim Spaces"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "Dash After Four Characters",
+  "description": "Inserts a dash four characters into the name: IMG1234 becomes IMG1-234. Adjust the offset and text after importing to fit your naming scheme.",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T09:00:00Z",
+  "ruleType": "Insert Text",
+  "rule": {
+    "type": "Insert Text",
+    "insertText": "-",
+    "insertPosition": "From start",
+    "insertOffset": 4
+  }
+}

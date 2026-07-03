@@ -22,6 +22,14 @@
       "ruleTypes": ["Sequential Number", "Change Case"]
     },
     {
+      "path": "presets/tv-episode-tidy.fwl",
+      "kind": "preset",
+      "name": "TV Episode Tidy",
+      "description": "Normalises TV episode filenames: consistent s01e02 markers, drops the episode title, and cleans up leftover dashes.",
+      "tags": ["tv", "episodes", "video", "cleanup"],
+      "ruleTypes": ["Regex Replace", "Script", "Find & Replace", "Trim Spaces"]
+    },
+    {
       "path": "rules/jpeg-normaliser.fwl",
       "kind": "rule",
       "name": "JPEG Normaliser",
@@ -36,6 +44,118 @@
       "description": "Script rule that shortens names longer than 40 characters and trims whitespace.",
       "tags": ["script", "length", "cleanup"],
       "ruleTypes": ["Script"]
+    },
+    {
+      "path": "rules/underscores-to-spaces.fwl",
+      "kind": "rule",
+      "name": "Underscores to Spaces",
+      "description": "Find & Replace rule that turns every underscore into a space.",
+      "tags": ["find-replace", "underscores", "spaces", "cleanup"],
+      "ruleTypes": ["Find & Replace"]
+    },
+    {
+      "path": "rules/draft-suffix.fwl",
+      "kind": "rule",
+      "name": "Draft Suffix",
+      "description": "Adds a _draft suffix to every filename (before the extension).",
+      "tags": ["suffix", "draft", "prefix"],
+      "ruleTypes": ["Add Prefix / Suffix"]
+    },
+    {
+      "path": "rules/three-digit-numbering.fwl",
+      "kind": "rule",
+      "name": "Three-Digit Numbering",
+      "description": "Appends a zero-padded running number after the name: photo_001, photo_002, ...",
+      "tags": ["numbering", "sequence", "padding"],
+      "ruleTypes": ["Sequential Number"]
+    },
+    {
+      "path": "rules/lowercase-names.fwl",
+      "kind": "rule",
+      "name": "Lowercase Names",
+      "description": "Converts the whole filename to lowercase.",
+      "tags": ["case", "lowercase"],
+      "ruleTypes": ["Change Case"]
+    },
+    {
+      "path": "rules/remove-bracketed-text.fwl",
+      "kind": "rule",
+      "name": "Remove Bracketed Text",
+      "description": "Regex rule that deletes anything in round brackets, including the brackets and any space before them.",
+      "tags": ["regex", "brackets", "cleanup"],
+      "ruleTypes": ["Regex Replace"]
+    },
+    {
+      "path": "rules/dash-after-four-characters.fwl",
+      "kind": "rule",
+      "name": "Dash After Four Characters",
+      "description": "Inserts a dash four characters into the name: IMG1234 becomes IMG1-234.",
+      "tags": ["insert", "dash", "position"],
+      "ruleTypes": ["Insert Text"]
+    },
+    {
+      "path": "rules/tidy-spaces.fwl",
+      "kind": "rule",
+      "name": "Tidy Spaces",
+      "description": "Removes leading and trailing spaces and collapses runs of spaces into one.",
+      "tags": ["spaces", "whitespace", "cleanup"],
+      "ruleTypes": ["Trim Spaces"]
+    },
+    {
+      "path": "rules/remove-copy-markers.fwl",
+      "kind": "rule",
+      "name": "Remove Copy Markers",
+      "description": "Strips the clutter duplicated files accumulate: \"Copy of \", \" copy\", \" (1)\", \" (2)\".",
+      "tags": ["strip", "duplicates", "copy", "cleanup"],
+      "ruleTypes": ["Strip Text"]
+    },
+    {
+      "path": "rules/capture-artist-and-title.fwl",
+      "kind": "rule",
+      "name": "Capture Artist and Title",
+      "description": "Set Variable rule for \"Artist - Title\" filenames: captures ARTIST and TITLE for later rules. Pairs with \"Organise Into Artist Folders\".",
+      "tags": ["variables", "music", "capture", "regex"],
+      "ruleTypes": ["Set Variable"]
+    },
+    {
+      "path": "rules/organise-into-artist-folders.fwl",
+      "kind": "rule",
+      "name": "Organise Into Artist Folders",
+      "description": "Set Name rule that rebuilds the name as ARTIST/TITLE, moving each file into a per-artist subfolder. Use below \"Capture Artist and Title\".",
+      "tags": ["template", "subfolders", "music", "organise"],
+      "ruleTypes": ["Set Name"]
+    },
+    {
+      "path": "rules/remove-trailing-dash.fwl",
+      "kind": "rule",
+      "name": "Remove ' -' from the end (if present)",
+      "description": "Script rule that trims a dangling ' -' left at the end of a name after other rules have removed text.",
+      "tags": ["script", "dash", "cleanup", "tv"],
+      "ruleTypes": ["Script"]
+    },
+    {
+      "path": "rules/collapse-double-dashes.fwl",
+      "kind": "rule",
+      "name": "Collapse '- -' to '-'",
+      "description": "Tidies the double separator left behind when text between two dashes is removed.",
+      "tags": ["dash", "separator", "cleanup"],
+      "ruleTypes": ["Find & Replace"]
+    },
+    {
+      "path": "rules/normalise-episode-markers.fwl",
+      "kind": "rule",
+      "name": "Normalise Episode Markers",
+      "description": "Rewrites TV episode markers like S01E02 or s01e02 into a consistent '- s01e02 -' form.",
+      "tags": ["tv", "episodes", "regex", "video"],
+      "ruleTypes": ["Regex Replace"]
+    },
+    {
+      "path": "rules/keep-first-two-dash-segments.fwl",
+      "kind": "rule",
+      "name": "Keep First Two Dash Segments",
+      "description": "Keeps only the first two ' - ' separated parts of a name — e.g. drops the episode title from 'Show - s01e02 - Title'.",
+      "tags": ["regex", "segments", "tv", "cleanup"],
+      "ruleTypes": ["Regex Replace"]
     }
   ]
 }
