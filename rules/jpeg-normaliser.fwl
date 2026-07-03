@@ -1,0 +1,18 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "JPEG Normaliser",
+  "description": "Maps .jpeg and .JPG extensions to .jpg.",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T09:00:00Z",
+  "ruleType": "Map Extension",
+  "rule": {
+    "type": "Map Extension",
+    "extensionMappings": [
+      { "from": "jpeg", "to": "jpg" },
+      { "from": "JPG", "to": "jpg" }
+    ]
+  }
+}

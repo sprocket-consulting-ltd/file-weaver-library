@@ -1,0 +1,41 @@
+{
+  "libraryFormatVersion": 1,
+  "name": "File Weaver Community Library",
+  "description": "Official presets and rules for File Weaver, maintained by Sprocket Consulting.",
+  "maintainer": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "entries": [
+    {
+      "path": "presets/photo-cleanup.fwl",
+      "kind": "preset",
+      "name": "Photo Cleanup",
+      "description": "Normalises camera filenames: strips IMG_ prefixes, reformats compact dates to YYYY-MM-DD, lowercases, trims spaces.",
+      "tags": ["photos", "camera", "dates", "cleanup"],
+      "ruleTypes": ["Strip Text", "Regex Replace", "Change Case", "Trim Spaces"]
+    },
+    {
+      "path": "presets/podcast-episodes.fwl",
+      "kind": "preset",
+      "name": "Podcast Episodes",
+      "description": "Numbers files sequentially as a prefix (001-, 002-, ...) and lowercases the name for consistent episode filenames.",
+      "tags": ["podcast", "audio", "numbering"],
+      "ruleTypes": ["Sequential Number", "Change Case"]
+    },
+    {
+      "path": "rules/jpeg-normaliser.fwl",
+      "kind": "rule",
+      "name": "JPEG Normaliser",
+      "description": "Maps .jpeg and .JPG extensions to .jpg.",
+      "tags": ["photos", "extensions", "jpeg"],
+      "ruleTypes": ["Map Extension"]
+    },
+    {
+      "path": "rules/truncate-long-names.fwl",
+      "kind": "rule",
+      "name": "Truncate Long Names",
+      "description": "Script rule that shortens names longer than 40 characters and trims whitespace.",
+      "tags": ["script", "length", "cleanup"],
+      "ruleTypes": ["Script"]
+    }
+  ]
+}

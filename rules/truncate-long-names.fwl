@@ -1,0 +1,15 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "Truncate Long Names",
+  "description": "Script rule that shortens names longer than 40 characters and trims whitespace.",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T09:00:00Z",
+  "ruleType": "Script",
+  "rule": {
+    "type": "Script",
+    "scriptText": "IF LEN($NAME) > 40 THEN\n$NAME = LEFT($NAME, 40)\nEND IF\n$NAME = TRIM($NAME)"
+  }
+}

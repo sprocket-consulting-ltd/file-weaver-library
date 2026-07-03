@@ -1,0 +1,24 @@
+{
+  "fwlVersion": 1,
+  "kind": "preset",
+  "name": "Podcast Episodes",
+  "description": "Numbers files sequentially as a prefix (001-, 002-, ...) and lowercases the name for consistent episode filenames.",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T09:00:00Z",
+  "rules": [
+    {
+      "type": "Change Case",
+      "caseOption": "lowercase"
+    },
+    {
+      "type": "Sequential Number",
+      "numberPosition": "Before name",
+      "numberStart": 1,
+      "numberStep": 1,
+      "numberDigits": 3,
+      "numberSeparator": "-"
+    }
+  ]
+}

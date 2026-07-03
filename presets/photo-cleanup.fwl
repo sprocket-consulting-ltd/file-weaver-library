@@ -1,0 +1,28 @@
+{
+  "fwlVersion": 1,
+  "kind": "preset",
+  "name": "Photo Cleanup",
+  "description": "Normalises camera filenames: strips IMG_ prefixes, reformats compact dates to YYYY-MM-DD, lowercases, trims spaces.",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.4",
+  "createdAt": "2026-07-03T09:00:00Z",
+  "rules": [
+    {
+      "type": "Strip Text",
+      "stripItems": ["IMG_", "DSC_", "Copy of "]
+    },
+    {
+      "type": "Regex Replace",
+      "regexPattern": "(20\\d{2})(\\d{2})(\\d{2})",
+      "regexReplacement": "$1-$2-$3"
+    },
+    {
+      "type": "Change Case",
+      "caseOption": "lowercase"
+    },
+    {
+      "type": "Trim Spaces"
+    }
+  ]
+}
