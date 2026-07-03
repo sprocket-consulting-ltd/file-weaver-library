@@ -9,153 +9,320 @@
       "path": "presets/photo-cleanup.fwl",
       "kind": "preset",
       "name": "Photo Cleanup",
+      "identifier": "74CB0870-72FC-401E-AE0B-33F6CAD74F7F",
+      "version": 1,
       "description": "Normalises camera filenames: strips IMG_ prefixes, reformats compact dates to YYYY-MM-DD, lowercases, trims spaces.",
-      "tags": ["photos", "camera", "dates", "cleanup"],
-      "ruleTypes": ["Strip Text", "Regex Replace", "Change Case", "Trim Spaces"]
+      "tags": [
+        "photos",
+        "camera",
+        "dates",
+        "cleanup"
+      ],
+      "ruleTypes": [
+        "Strip Text",
+        "Regex Replace",
+        "Change Case",
+        "Trim Spaces"
+      ]
     },
     {
       "path": "presets/podcast-episodes.fwl",
       "kind": "preset",
       "name": "Podcast Episodes",
+      "identifier": "B316F92B-3424-443D-B874-04F4FC5447E0",
+      "version": 1,
       "description": "Numbers files sequentially as a prefix (001-, 002-, ...) and lowercases the name for consistent episode filenames.",
-      "tags": ["podcast", "audio", "numbering"],
-      "ruleTypes": ["Sequential Number", "Change Case"]
+      "tags": [
+        "podcast",
+        "audio",
+        "numbering"
+      ],
+      "ruleTypes": [
+        "Sequential Number",
+        "Change Case"
+      ]
     },
     {
       "path": "presets/tv-episode-tidy.fwl",
       "kind": "preset",
       "name": "TV Episode Tidy",
+      "identifier": "AE5A860E-1E22-49CE-8D52-B1EDFBB878FE",
+      "version": 1,
       "description": "Normalises TV episode filenames: consistent s01e02 markers, drops the episode title, and cleans up leftover dashes.",
-      "tags": ["tv", "episodes", "video", "cleanup"],
-      "ruleTypes": ["Regex Replace", "Script", "Find & Replace", "Trim Spaces"]
+      "tags": [
+        "tv",
+        "episodes",
+        "video",
+        "cleanup"
+      ],
+      "ruleTypes": [
+        "Regex Replace",
+        "Script",
+        "Find & Replace",
+        "Trim Spaces"
+      ]
     },
     {
       "path": "rules/jpeg-normaliser.fwl",
       "kind": "rule",
       "name": "JPEG Normaliser",
+      "identifier": "B827D8F6-C8A6-4665-9850-7B1B32720612",
+      "version": 1,
       "description": "Maps .jpeg and .JPG extensions to .jpg.",
-      "tags": ["photos", "extensions", "jpeg"],
-      "ruleTypes": ["Map Extension"]
+      "tags": [
+        "photos",
+        "extensions",
+        "jpeg"
+      ],
+      "ruleTypes": [
+        "Map Extension"
+      ]
     },
     {
       "path": "rules/truncate-long-names.fwl",
       "kind": "rule",
       "name": "Truncate Long Names",
+      "identifier": "B70A8689-5A90-47AA-AF55-C7446CE4F817",
+      "version": 1,
       "description": "Script rule that shortens names longer than 40 characters and trims whitespace.",
-      "tags": ["script", "length", "cleanup"],
-      "ruleTypes": ["Script"]
+      "tags": [
+        "script",
+        "length",
+        "cleanup"
+      ],
+      "ruleTypes": [
+        "Script"
+      ]
     },
     {
       "path": "rules/underscores-to-spaces.fwl",
       "kind": "rule",
       "name": "Underscores to Spaces",
+      "identifier": "7EE45FC2-D315-485A-9936-E3F3E6C4EE4B",
+      "version": 1,
       "description": "Find & Replace rule that turns every underscore into a space.",
-      "tags": ["find-replace", "underscores", "spaces", "cleanup"],
-      "ruleTypes": ["Find & Replace"]
+      "tags": [
+        "find-replace",
+        "underscores",
+        "spaces",
+        "cleanup"
+      ],
+      "ruleTypes": [
+        "Find & Replace"
+      ]
     },
     {
       "path": "rules/draft-suffix.fwl",
       "kind": "rule",
       "name": "Draft Suffix",
+      "identifier": "7CB0A7F8-5F3B-4C8C-B6A4-DBAE644BA868",
+      "version": 1,
       "description": "Adds a _draft suffix to every filename (before the extension).",
-      "tags": ["suffix", "draft", "prefix"],
-      "ruleTypes": ["Add Prefix / Suffix"]
+      "tags": [
+        "suffix",
+        "draft",
+        "prefix"
+      ],
+      "ruleTypes": [
+        "Add Prefix / Suffix"
+      ]
     },
     {
       "path": "rules/three-digit-numbering.fwl",
       "kind": "rule",
       "name": "Three-Digit Numbering",
+      "identifier": "9872D9DE-D93D-4B13-96E1-0A9D463F7928",
+      "version": 1,
       "description": "Appends a zero-padded running number after the name: photo_001, photo_002, ...",
-      "tags": ["numbering", "sequence", "padding"],
-      "ruleTypes": ["Sequential Number"]
+      "tags": [
+        "numbering",
+        "sequence",
+        "padding"
+      ],
+      "ruleTypes": [
+        "Sequential Number"
+      ]
     },
     {
       "path": "rules/lowercase-names.fwl",
       "kind": "rule",
       "name": "Lowercase Names",
+      "identifier": "A5E00112-DE60-4EAB-A755-C32ED1319FC4",
+      "version": 1,
       "description": "Converts the whole filename to lowercase.",
-      "tags": ["case", "lowercase"],
-      "ruleTypes": ["Change Case"]
+      "tags": [
+        "case",
+        "lowercase"
+      ],
+      "ruleTypes": [
+        "Change Case"
+      ]
     },
     {
       "path": "rules/remove-bracketed-text.fwl",
       "kind": "rule",
       "name": "Remove Bracketed Text",
+      "identifier": "22A7F64F-F516-48B4-9E9E-0EF8FD7C0653",
+      "version": 1,
       "description": "Regex rule that deletes anything in round brackets, including the brackets and any space before them.",
-      "tags": ["regex", "brackets", "cleanup"],
-      "ruleTypes": ["Regex Replace"]
+      "tags": [
+        "regex",
+        "brackets",
+        "cleanup"
+      ],
+      "ruleTypes": [
+        "Regex Replace"
+      ]
     },
     {
       "path": "rules/dash-after-four-characters.fwl",
       "kind": "rule",
       "name": "Dash After Four Characters",
+      "identifier": "237832AC-F1DF-4B67-A20B-97FBA9A7285F",
+      "version": 1,
       "description": "Inserts a dash four characters into the name: IMG1234 becomes IMG1-234.",
-      "tags": ["insert", "dash", "position"],
-      "ruleTypes": ["Insert Text"]
+      "tags": [
+        "insert",
+        "dash",
+        "position"
+      ],
+      "ruleTypes": [
+        "Insert Text"
+      ]
     },
     {
       "path": "rules/tidy-spaces.fwl",
       "kind": "rule",
       "name": "Tidy Spaces",
+      "identifier": "65274807-BF33-49B2-8F12-1CA5393C36D7",
+      "version": 1,
       "description": "Removes leading and trailing spaces and collapses runs of spaces into one.",
-      "tags": ["spaces", "whitespace", "cleanup"],
-      "ruleTypes": ["Trim Spaces"]
+      "tags": [
+        "spaces",
+        "whitespace",
+        "cleanup"
+      ],
+      "ruleTypes": [
+        "Trim Spaces"
+      ]
     },
     {
       "path": "rules/remove-copy-markers.fwl",
       "kind": "rule",
       "name": "Remove Copy Markers",
+      "identifier": "9B3DA6E4-741A-4EF0-9CB8-F595EDF66C98",
+      "version": 1,
       "description": "Strips the clutter duplicated files accumulate: \"Copy of \", \" copy\", \" (1)\", \" (2)\".",
-      "tags": ["strip", "duplicates", "copy", "cleanup"],
-      "ruleTypes": ["Strip Text"]
+      "tags": [
+        "strip",
+        "duplicates",
+        "copy",
+        "cleanup"
+      ],
+      "ruleTypes": [
+        "Strip Text"
+      ]
     },
     {
       "path": "rules/capture-artist-and-title.fwl",
       "kind": "rule",
       "name": "Capture Artist and Title",
+      "identifier": "AEABF357-3DBB-4D5C-9F26-315DA60061F4",
+      "version": 1,
       "description": "Set Variable rule for \"Artist - Title\" filenames: captures ARTIST and TITLE for later rules. Pairs with \"Organise Into Artist Folders\".",
-      "tags": ["variables", "music", "capture", "regex"],
-      "ruleTypes": ["Set Variable"]
+      "tags": [
+        "variables",
+        "music",
+        "capture",
+        "regex"
+      ],
+      "ruleTypes": [
+        "Set Variable"
+      ]
     },
     {
       "path": "rules/organise-into-artist-folders.fwl",
       "kind": "rule",
       "name": "Organise Into Artist Folders",
+      "identifier": "89E743FE-57E3-4465-B38F-07E6AD1AFE61",
+      "version": 1,
       "description": "Set Name rule that rebuilds the name as ARTIST/TITLE, moving each file into a per-artist subfolder. Use below \"Capture Artist and Title\".",
-      "tags": ["template", "subfolders", "music", "organise"],
-      "ruleTypes": ["Set Name"]
+      "tags": [
+        "template",
+        "subfolders",
+        "music",
+        "organise"
+      ],
+      "ruleTypes": [
+        "Set Name"
+      ]
     },
     {
       "path": "rules/remove-trailing-dash.fwl",
       "kind": "rule",
       "name": "Remove ' -' from the end (if present)",
+      "identifier": "EF0ACA4F-D359-4880-ACD7-2AA3D5E53CCF",
+      "version": 1,
       "description": "Script rule that trims a dangling ' -' left at the end of a name after other rules have removed text.",
-      "tags": ["script", "dash", "cleanup", "tv"],
-      "ruleTypes": ["Script"]
+      "tags": [
+        "script",
+        "dash",
+        "cleanup",
+        "tv"
+      ],
+      "ruleTypes": [
+        "Script"
+      ]
     },
     {
       "path": "rules/collapse-double-dashes.fwl",
       "kind": "rule",
       "name": "Collapse '- -' to '-'",
+      "identifier": "E926DF5C-2815-49EE-BFB4-B954A23F33C3",
+      "version": 1,
       "description": "Tidies the double separator left behind when text between two dashes is removed.",
-      "tags": ["dash", "separator", "cleanup"],
-      "ruleTypes": ["Find & Replace"]
+      "tags": [
+        "dash",
+        "separator",
+        "cleanup"
+      ],
+      "ruleTypes": [
+        "Find & Replace"
+      ]
     },
     {
       "path": "rules/normalise-episode-markers.fwl",
       "kind": "rule",
       "name": "Normalise Episode Markers",
+      "identifier": "DB3D791A-4CB9-4356-BC73-A0641B755EDC",
+      "version": 1,
       "description": "Rewrites TV episode markers like S01E02 or s01e02 into a consistent '- s01e02 -' form.",
-      "tags": ["tv", "episodes", "regex", "video"],
-      "ruleTypes": ["Regex Replace"]
+      "tags": [
+        "tv",
+        "episodes",
+        "regex",
+        "video"
+      ],
+      "ruleTypes": [
+        "Regex Replace"
+      ]
     },
     {
       "path": "rules/keep-first-two-dash-segments.fwl",
       "kind": "rule",
       "name": "Keep First Two Dash Segments",
+      "identifier": "67B6CB46-C2A2-4F56-A95B-5C7663435B7A",
+      "version": 1,
       "description": "Keeps only the first two ' - ' separated parts of a name — e.g. drops the episode title from 'Show - s01e02 - Title'.",
-      "tags": ["regex", "segments", "tv", "cleanup"],
-      "ruleTypes": ["Regex Replace"]
+      "tags": [
+        "regex",
+        "segments",
+        "tv",
+        "cleanup"
+      ],
+      "ruleTypes": [
+        "Regex Replace"
+      ]
     }
   ]
 }

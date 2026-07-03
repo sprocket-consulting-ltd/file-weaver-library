@@ -7,9 +7,16 @@
   "website": "https://www.sprocketconsulting.co.uk/file-weaver",
   "minAppVersion": "1.4",
   "createdAt": "2026-07-03T09:00:00Z",
+  "identifier": "9B3DA6E4-741A-4EF0-9CB8-F595EDF66C98",
+  "version": 1,
   "ruleType": "Strip Text",
   "rule": {
     "type": "Strip Text",
-    "stripItems": ["Copy of ", " copy", " (1)", " (2)"]
+    "stripItems": [
+      "Copy of ",
+      " copy",
+      " (1)",
+      " (2)"
+    ]
   }
 }

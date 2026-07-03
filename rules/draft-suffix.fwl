@@ -7,6 +7,8 @@
   "website": "https://www.sprocketconsulting.co.uk/file-weaver",
   "minAppVersion": "1.4",
   "createdAt": "2026-07-03T09:00:00Z",
+  "identifier": "7CB0A7F8-5F3B-4C8C-B6A4-DBAE644BA868",
+  "version": 1,
   "ruleType": "Add Prefix / Suffix",
   "rule": {
     "type": "Add Prefix / Suffix",

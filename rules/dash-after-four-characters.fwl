@@ -7,6 +7,8 @@
   "website": "https://www.sprocketconsulting.co.uk/file-weaver",
   "minAppVersion": "1.4",
   "createdAt": "2026-07-03T09:00:00Z",
+  "identifier": "237832AC-F1DF-4B67-A20B-97FBA9A7285F",
+  "version": 1,
   "ruleType": "Insert Text",
   "rule": {
     "type": "Insert Text",

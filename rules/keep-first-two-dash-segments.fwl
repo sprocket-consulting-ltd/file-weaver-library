@@ -7,6 +7,8 @@
   "website": "https://www.sprocketconsulting.co.uk/file-weaver",
   "minAppVersion": "1.4",
   "createdAt": "2026-07-03T17:27:52Z",
+  "identifier": "67B6CB46-C2A2-4F56-A95B-5C7663435B7A",
+  "version": 1,
   "ruleType": "Regex Replace",
   "rule": {
     "type": "Regex Replace",

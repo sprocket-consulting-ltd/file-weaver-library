@@ -6,9 +6,10 @@ set -e
 cd "$(dirname "$0")"
 
 python3 - <<'PYEOF'
-import json, os, sys
+import json, os, sys, uuid as uuidlib
 
 errors = []
+seen_identifiers = {}
 
 RULE_TYPES = {
     "Find & Replace", "Add Prefix / Suffix", "Sequential Number", "Change Case",
@@ -51,6 +52,20 @@ for i, e in enumerate(entries):
         err(f"{where}: kind must be 'preset' or 'rule'")
     if not e.get("name"):
         err(f"{where}: name is required")
+    ident = e.get("identifier")
+    try:
+        uuidlib.UUID(ident)
+    except (ValueError, TypeError):
+        err(f"{where}: identifier must be a valid UUID (got {ident!r})")
+        ident = None
+    if ident:
+        key = ident.lower()
+        if key in seen_identifiers:
+            err(f"{where}: identifier duplicates {seen_identifiers[key]}")
+        seen_identifiers[key] = path
+    ver = e.get("version")
+    if not isinstance(ver, (int, float)) or isinstance(ver, bool) or ver <= 0:
+        err(f"{where}: version must be a positive number (got {ver!r})")
     for rt in e.get("ruleTypes", []):
         if rt not in RULE_TYPES:
             err(f"{where}: unknown ruleType {rt!r}")
@@ -71,6 +86,19 @@ for i, e in enumerate(entries):
         err(f"{path}: kind {kind!r} != manifest kind {e.get('kind')!r}")
     if fwl.get("name") != e.get("name"):
         err(f"{path}: name {fwl.get('name')!r} != manifest name {e.get('name')!r}")
+    f_ident = fwl.get("identifier")
+    try:
+        uuidlib.UUID(f_ident)
+    except (ValueError, TypeError):
+        err(f"{path}: identifier must be a valid UUID (got {f_ident!r})")
+        f_ident = None
+    if f_ident and ident and f_ident.lower() != ident.lower():
+        err(f"{path}: identifier != manifest identifier")
+    f_ver = fwl.get("version")
+    if not isinstance(f_ver, (int, float)) or isinstance(f_ver, bool) or f_ver <= 0:
+        err(f"{path}: version must be a positive number (got {f_ver!r})")
+    elif isinstance(ver, (int, float)) and f_ver != ver:
+        err(f"{path}: version {f_ver!r} != manifest version {ver!r}")
     if kind == "preset":
         rules = fwl.get("rules")
         if not isinstance(rules, list) or not rules:

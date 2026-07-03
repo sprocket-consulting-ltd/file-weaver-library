@@ -7,6 +7,8 @@
   "website": "https://www.sprocketconsulting.co.uk/file-weaver",
   "minAppVersion": "1.4",
   "createdAt": "2026-07-03T09:00:00Z",
+  "identifier": "65274807-BF33-49B2-8F12-1CA5393C36D7",
+  "version": 1,
   "ruleType": "Trim Spaces",
   "rule": {
     "type": "Trim Spaces"

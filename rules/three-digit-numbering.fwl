@@ -7,6 +7,8 @@
   "website": "https://www.sprocketconsulting.co.uk/file-weaver",
   "minAppVersion": "1.4",
   "createdAt": "2026-07-03T09:00:00Z",
+  "identifier": "9872D9DE-D93D-4B13-96E1-0A9D463F7928",
+  "version": 1,
   "ruleType": "Sequential Number",
   "rule": {
     "type": "Sequential Number",

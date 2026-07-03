@@ -7,10 +7,16 @@
   "website": "https://www.sprocketconsulting.co.uk/file-weaver",
   "minAppVersion": "1.4",
   "createdAt": "2026-07-03T09:00:00Z",
+  "identifier": "74CB0870-72FC-401E-AE0B-33F6CAD74F7F",
+  "version": 1,
   "rules": [
     {
       "type": "Strip Text",
-      "stripItems": ["IMG_", "DSC_", "Copy of "]
+      "stripItems": [
+        "IMG_",
+        "DSC_",
+        "Copy of "
+      ]
     },
     {
       "type": "Regex Replace",

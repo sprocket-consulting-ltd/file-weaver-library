@@ -7,12 +7,20 @@
   "website": "https://www.sprocketconsulting.co.uk/file-weaver",
   "minAppVersion": "1.4",
   "createdAt": "2026-07-03T09:00:00Z",
+  "identifier": "B827D8F6-C8A6-4665-9850-7B1B32720612",
+  "version": 1,
   "ruleType": "Map Extension",
   "rule": {
     "type": "Map Extension",
     "extensionMappings": [
-      { "from": "jpeg", "to": "jpg" },
-      { "from": "JPG", "to": "jpg" }
+      {
+        "from": "jpeg",
+        "to": "jpg"
+      },
+      {
+        "from": "JPG",
+        "to": "jpg"
+      }
     ]
   }
 }

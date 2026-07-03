@@ -7,6 +7,8 @@
   "website": "https://www.sprocketconsulting.co.uk/file-weaver",
   "minAppVersion": "1.4",
   "createdAt": "2026-07-03T09:00:00Z",
+  "identifier": "B316F92B-3424-443D-B874-04F4FC5447E0",
+  "version": 1,
   "rules": [
     {
       "type": "Change Case",
