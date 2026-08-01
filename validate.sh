@@ -12,9 +12,10 @@ errors = []
 seen_identifiers = {}
 
 RULE_TYPES = {
-    "Find & Replace", "Add Prefix / Suffix", "Sequential Number", "Change Case",
-    "Regex Replace", "Insert Text", "Trim Spaces", "Strip Text", "Map Extension",
-    "Script", "Set Variable", "Set Name",
+    "Find & Replace", "Batch Find & Replace", "Add Prefix / Suffix",
+    "Sequential Number", "Change Case", "Regex Replace", "Insert Text",
+    "Trim Spaces", "Strip Text", "Map Extension", "Script", "Set Variable",
+    "Set Name",
 }
 
 def err(msg):

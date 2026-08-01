@@ -1,0 +1,26 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "Windows-Safe Filenames",
+  "description": "Swaps characters that are illegal in Windows and cross-platform filenames for safe equivalents in one pass: colons and pipes become dashes, angle brackets become parentheses, question marks and asterisks are dropped, and straight quotes become apostrophes.",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.5",
+  "createdAt": "2026-07-16T08:14:27Z",
+  "identifier": "E9F53302-A655-45F6-8F9F-5F215B00005A",
+  "version": 1,
+  "ruleType": "Batch Find & Replace",
+  "rule": {
+    "type": "Batch Find & Replace",
+    "findReplacePairs": [
+      { "find": ":",  "replace": "-" },
+      { "find": "|",  "replace": "-" },
+      { "find": "\\", "replace": "-" },
+      { "find": "<",  "replace": "(" },
+      { "find": ">",  "replace": ")" },
+      { "find": "\"", "replace": "'" },
+      { "find": "?",  "replace": "" },
+      { "find": "*",  "replace": "" }
+    ]
+  }
+}

@@ -323,6 +323,40 @@
       "ruleTypes": [
         "Regex Replace"
       ]
+    },
+    {
+      "path": "rules/windows-safe-filenames.fwl",
+      "kind": "rule",
+      "name": "Windows-Safe Filenames",
+      "identifier": "E9F53302-A655-45F6-8F9F-5F215B00005A",
+      "version": 1,
+      "description": "Swaps characters that are illegal in Windows and cross-platform filenames for safe equivalents in one pass.",
+      "tags": [
+        "batch",
+        "cleanup",
+        "windows",
+        "cross-platform"
+      ],
+      "ruleTypes": [
+        "Batch Find & Replace"
+      ]
+    },
+    {
+      "path": "rules/month-names-to-numbers.fwl",
+      "kind": "rule",
+      "name": "Month Names to Numbers",
+      "identifier": "8B0BD617-740B-4995-97B2-90D7EB06D090",
+      "version": 1,
+      "description": "Rewrites full English month names as zero-padded numbers so dated filenames sort chronologically.",
+      "tags": [
+        "batch",
+        "dates",
+        "months",
+        "sorting"
+      ],
+      "ruleTypes": [
+        "Batch Find & Replace"
+      ]
     }
   ]
 }

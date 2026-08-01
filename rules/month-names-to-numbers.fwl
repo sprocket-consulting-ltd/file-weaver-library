@@ -1,0 +1,30 @@
+{
+  "fwlVersion": 1,
+  "kind": "rule",
+  "name": "Month Names to Numbers",
+  "description": "Rewrites full English month names as zero-padded numbers (January to 01, February to 02, and so on) so dated filenames sort chronologically. Matching is case-insensitive. Note: \"May\" is a short word - review results if your names contain it inside other words.",
+  "author": "Sprocket Consulting",
+  "website": "https://www.sprocketconsulting.co.uk/file-weaver",
+  "minAppVersion": "1.5",
+  "createdAt": "2026-07-16T08:14:27Z",
+  "identifier": "8B0BD617-740B-4995-97B2-90D7EB06D090",
+  "version": 1,
+  "ruleType": "Batch Find & Replace",
+  "rule": {
+    "type": "Batch Find & Replace",
+    "findReplacePairs": [
+      { "find": "January",   "replace": "01" },
+      { "find": "February",  "replace": "02" },
+      { "find": "March",     "replace": "03" },
+      { "find": "April",     "replace": "04" },
+      { "find": "May",       "replace": "05" },
+      { "find": "June",      "replace": "06" },
+      { "find": "July",      "replace": "07" },
+      { "find": "August",    "replace": "08" },
+      { "find": "September", "replace": "09" },
+      { "find": "October",   "replace": "10" },
+      { "find": "November",  "replace": "11" },
+      { "find": "December",  "replace": "12" }
+    ]
+  }
+}
